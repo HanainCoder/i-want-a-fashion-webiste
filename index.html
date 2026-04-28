@@ -1,101 +1,148 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Aurora Atelier — Modern Fashion Preview</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ModaHaus — Contemporary Fashion</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Small custom styles to refine the preview */
-    .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.6));
-      backdrop-filter: blur(6px);
-    }
+    /* Small enhancement for the preview image overlay */
+    .image-stack > img { transition: transform .4s ease, box-shadow .4s ease; }
+    .image-stack > img:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 40px rgba(0,0,0,0.18); }
   </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-  <section class="mx-auto mt-16 max-w-4xl p-6 glass rounded-2xl shadow-lg">
-    <!-- Top navigation / brand -->
-    <div class="flex items-center justify-between mb-6">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-indigo-500 flex items-center justify-center text-white font-bold text-lg shadow-md">A</div>
-        <div>
-          <h1 class="text-lg font-semibold">Aurora Atelier</h1>
-          <p class="text-xs text-gray-500 -mt-0.5">Contemporary womenswear & essentials</p>
+<body class="bg-gray-50 antialiased">
+  <section aria-labelledby="landing-heading" class="max-w-5xl mx-auto my-16 px-6 py-10 bg-white rounded-2xl shadow-lg">
+    <div class="flex items-start gap-10">
+      <!-- Left column: Branding and copy -->
+      <div class="flex-1 min-w-0">
+        <!-- Top bar (brand + subtle nav) -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold">MH</div>
+            <div>
+              <p class="text-sm font-semibold">ModaHaus Gujrat</p>
+              <p class="text-xs text-gray-500">Contemporary womenswear</p>
+            </div>
+          </div>
+          <nav class="hidden sm:flex items-center gap-4 text-sm text-gray-600">
+            <a href="#" class="hover:text-gray-900">New</a>
+            <a href="#" class="hover:text-gray-900">Collections</a>
+            <a href="#" class="hover:text-gray-900">Journal</a>
+            <a href="#" class="text-white bg-gray-900 px-3 py-1 rounded-md text-sm">Shop</a>
+          </nav>
         </div>
-      </div>
-      <nav class="hidden sm:flex items-center gap-6 text-sm">
-        <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Collections</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Journal</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Contact</a>
-      </nav>
-      <div class="sm:hidden">
-        <button aria-label="Open menu" class="p-2 rounded-md bg-gray-100 hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
 
-    <!-- Main hero content: image + text -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-      <div class="relative rounded-xl overflow-hidden shadow-md">
-        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4a1de6317a6f6f0d3f4f0bfe6b8d6f6c" alt="Model wearing modern outfit" class="w-full h-72 object-cover">
-        <div class="absolute left-4 bottom-4 bg-white/80 text-gray-800 rounded-md px-3 py-2 text-sm font-medium backdrop-blur-sm">New Arrival • Spring 2026</div>
-      </div>
+        <h1 id="landing-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 leading-tight">
+          Modern silhouettes, timeless quality
+        </h1>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          Discover curated seasonal pieces crafted for effortless looks. From elevated basics to statement dresses — sustainable materials, precise tailoring, and a palette that travels from day to night.
+        </p>
 
-      <div class="px-1">
-        <h2 class="text-2xl font-extrabold leading-tight mb-3">Effortless silhouettes. Thoughtful details.</h2>
-        <p class="text-gray-600 mb-5">Aurora Atelier blends minimalist tailoring with sustainably sourced fabrics to create pieces that travel seamlessly from day to night. Designed for clarity, crafted for comfort.</p>
-        <div class="flex gap-3 mb-6">
-          <a href="#" class="inline-flex items-center gap-2 px-5 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v4H3zM3 10h18v11H3z"/></svg>
-            Shop Collection
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#" class="inline-flex items-center gap-2 bg-gray-900 text-white px-5 py-3 rounded-md shadow hover:opacity-95">
+            Shop New Arrivals
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
-          <a href="#" class="px-5 py-3 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-100 transition">Explore Fabric Stories</a>
+          <a href="#" class="inline-flex items-center gap-2 border border-gray-200 px-4 py-3 rounded-md text-gray-700 hover:bg-gray-50">
+            Explore Lookbook
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A2 2 0 0122 9.618v4.764a2 2 0 01-2.447 1.894L15 14M4 6v12a2 2 0 002 2h1.5"/></svg>
+          </a>
         </div>
 
-        <!-- Quick product preview (carousel-like row) -->
-        <div>
-          <h3 class="text-sm uppercase tracking-wide text-gray-500 mb-3">Featured pieces</h3>
-          <div class="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
-            <div class="min-w-[140px] bg-white rounded-xl p-3 shadow-sm flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1542060748-7e0c722b9d8b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8d3d189e2b3b3f6f5a6c5a2f7b7b1c3b" alt="Tailored blazer" class="w-full h-28 object-cover rounded-md mb-3">
-              <div class="text-sm font-medium">Tailored Blazer</div>
-              <div class="text-xs text-gray-500 mt-1">$248</div>
+        <!-- Feature list -->
+        <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 w-10 h-10 bg-pink-50 text-pink-600 rounded-lg flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l6 6-6 6M21 7l-6 6 6 6"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900">Free worldwide shipping</p>
+              <p class="text-gray-500">On all orders over $150</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.866-3.582 7-8 7v-7h8zM7 4v7"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900">Tailored fits</p>
+              <p class="text-gray-500">Made to flatter every shape</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 w-10 h-10 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900">Conscious materials</p>
+              <p class="text-gray-500">Responsible sourcing & production</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter / CTA strip -->
+        <form class="mt-8 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center" onsubmit="event.preventDefault()">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" required placeholder="Enter your email for 10% off" class="flex-1 px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-200" />
+          <button type="submit" class="px-5 py-3 bg-pink-600 text-white rounded-md shadow hover:bg-pink-700">Get 10% Off</button>
+        </form>
+
+        <p class="mt-3 text-xs text-gray-400">By subscribing you agree to receive updates. You can unsubscribe anytime.</p>
+      </div>
+
+      <!-- Right column: Visual preview (collage) -->
+      <div class="w-80 hidden sm:block">
+        <div class="relative">
+          <div class="rounded-xl overflow-hidden bg-gray-100 image-stack">
+            <img src="https://images.unsplash.com/photo-1533685617120-6a4cdb7b6a9f?auto=format&fit=crop&w=600&q=60" alt="Model wearing contemporary dress" class="w-full h-52 object-cover">
+            <div class="p-4 bg-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-gray-500">New Arrival</p>
+                  <p class="font-semibold text-gray-900">Satin Wrap Dress</p>
+                </div>
+                <div class="text-sm font-medium text-pink-600">$148</div>
+              </div>
+              <p class="mt-3 text-xs text-gray-600">Silky finish, adjustable waist, evening-ready.</p>
+            </div>
+          </div>
+
+          <!-- Overlapping mini cards -->
+          <div class="absolute -bottom-6 left-4 flex gap-3">
+            <div class="w-28 bg-white rounded-xl shadow-sm overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=300&q=60" alt="Casual top" class="w-full h-20 object-cover">
+              <div class="p-2">
+                <p class="text-xs text-gray-700">Ribbed Top</p>
+                <p class="text-xs text-pink-600 font-medium">$44</p>
+              </div>
             </div>
 
-            <div class="min-w-[140px] bg-white rounded-xl p-3 shadow-sm flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1520975915326-2220f06d3c2b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=63a3d0b2d4c1f5f6a8e2d9b7a9f6e7d8" alt="Silk blouse" class="w-full h-28 object-cover rounded-md mb-3">
-              <div class="text-sm font-medium">Silk Blouse</div>
-              <div class="text-xs text-gray-500 mt-1">$118</div>
+            <div class="w-28 bg-white rounded-xl shadow-sm overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1520975913146-4b6bd3b6f4b8?auto=format&fit=crop&w=300&q=60" alt="Tailored blazer" class="w-full h-20 object-cover">
+              <div class="p-2">
+                <p class="text-xs text-gray-700">Tailored Blazer</p>
+                <p class="text-xs text-pink-600 font-medium">$220</p>
+              </div>
             </div>
+          </div>
 
-            <div class="min-w-[140px] bg-white rounded-xl p-3 shadow-sm flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1520975687593-1b4a3a1f0a6e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=4f3c6e2f8c9b7f5e2a6d1b3c4e7f8a2b" alt="Wide leg trousers" class="w-full h-28 object-cover rounded-md mb-3">
-              <div class="text-sm font-medium">Wide-Leg Trouser</div>
-              <div class="text-xs text-gray-500 mt-1">$132</div>
+        </div>
+
+        <div class="mt-12 text-xs text-gray-500">
+          <p class="mb-2">Editorial picks</p>
+          <div class="flex items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=80&q=60" alt="detail" class="w-10 h-10 rounded-md object-cover">
+            <div>
+              <p class="text-sm text-gray-800 font-medium">Editorial: How to style neutrals</p>
+              <p class="text-xs">5 min read</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Minimal trust & shipping bar (keeps everything inside the single section) -->
-    <div class="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-gray-600">
-      <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-2 bg-white/60 px-3 py-2 rounded-lg shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Free returns within 30 days
-        </span>
-        <span class="inline-flex items-center gap-2 bg-white/60 px-3 py-2 rounded-lg shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M10 11v6M14 11v6"/></svg>
-          Carbon-neutral packaging
-        </span>
-      </div>
-      <div class="text-right text-xs text-gray-500">International shipping • Also available in boutiques</div>
     </div>
   </section>
 </body>
